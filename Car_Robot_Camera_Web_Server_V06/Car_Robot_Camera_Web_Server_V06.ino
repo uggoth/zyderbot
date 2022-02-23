@@ -25,75 +25,13 @@ const char* password = "Bankal0re*";
 #define PART_BOUNDARY "123456789000000000000987654321"
 
 #define CAMERA_MODEL_AI_THINKER
-//#define CAMERA_MODEL_M5STACK_PSRAM
-//#define CAMERA_MODEL_M5STACK_WITHOUT_PSRAM
-//#define CAMERA_MODEL_M5STACK_PSRAM_B
-//#define CAMERA_MODEL_WROVER_KIT
 
-#if defined(CAMERA_MODEL_WROVER_KIT)
-  #define PWDN_GPIO_NUM    -1
-  #define RESET_GPIO_NUM   -1
-  #define XCLK_GPIO_NUM    21
-  #define SIOD_GPIO_NUM    26
-  #define SIOC_GPIO_NUM    27
-  
-  #define Y9_GPIO_NUM      35
-  #define Y8_GPIO_NUM      34
-  #define Y7_GPIO_NUM      39
-  #define Y6_GPIO_NUM      36
-  #define Y5_GPIO_NUM      19
-  #define Y4_GPIO_NUM      18
-  #define Y3_GPIO_NUM       5
-  #define Y2_GPIO_NUM       4
-  #define VSYNC_GPIO_NUM   25
-  #define HREF_GPIO_NUM    23
-  #define PCLK_GPIO_NUM    22
-
-#elif defined(CAMERA_MODEL_M5STACK_PSRAM)
-  #define PWDN_GPIO_NUM     -1
-  #define RESET_GPIO_NUM    15
-  #define XCLK_GPIO_NUM     27
-  #define SIOD_GPIO_NUM     25
-  #define SIOC_GPIO_NUM     23
-  
-  #define Y9_GPIO_NUM       19
-  #define Y8_GPIO_NUM       36
-  #define Y7_GPIO_NUM       18
-  #define Y6_GPIO_NUM       39
-  #define Y5_GPIO_NUM        5
-  #define Y4_GPIO_NUM       34
-  #define Y3_GPIO_NUM       35
-  #define Y2_GPIO_NUM       32
-  #define VSYNC_GPIO_NUM    22
-  #define HREF_GPIO_NUM     26
-  #define PCLK_GPIO_NUM     21
-
-#elif defined(CAMERA_MODEL_M5STACK_WITHOUT_PSRAM)
-  #define PWDN_GPIO_NUM     -1
-  #define RESET_GPIO_NUM    15
-  #define XCLK_GPIO_NUM     27
-  #define SIOD_GPIO_NUM     25
-  #define SIOC_GPIO_NUM     23
-  
-  #define Y9_GPIO_NUM       19
-  #define Y8_GPIO_NUM       36
-  #define Y7_GPIO_NUM       18
-  #define Y6_GPIO_NUM       39
-  #define Y5_GPIO_NUM        5
-  #define Y4_GPIO_NUM       34
-  #define Y3_GPIO_NUM       35
-  #define Y2_GPIO_NUM       17
-  #define VSYNC_GPIO_NUM    22
-  #define HREF_GPIO_NUM     26
-  #define PCLK_GPIO_NUM     21
-
-#elif defined(CAMERA_MODEL_AI_THINKER)
+#if defined(CAMERA_MODEL_AI_THINKER)
   #define PWDN_GPIO_NUM     32
   #define RESET_GPIO_NUM    -1
   #define XCLK_GPIO_NUM      0
   #define SIOD_GPIO_NUM     26
   #define SIOC_GPIO_NUM     27
-  
   #define Y9_GPIO_NUM       35
   #define Y8_GPIO_NUM       34
   #define Y7_GPIO_NUM       39
@@ -105,26 +43,6 @@ const char* password = "Bankal0re*";
   #define VSYNC_GPIO_NUM    25
   #define HREF_GPIO_NUM     23
   #define PCLK_GPIO_NUM     22
-
-#elif defined(CAMERA_MODEL_M5STACK_PSRAM_B)
-  #define PWDN_GPIO_NUM     -1
-  #define RESET_GPIO_NUM    15
-  #define XCLK_GPIO_NUM     27
-  #define SIOD_GPIO_NUM     22
-  #define SIOC_GPIO_NUM     23
-  
-  #define Y9_GPIO_NUM       19
-  #define Y8_GPIO_NUM       36
-  #define Y7_GPIO_NUM       18
-  #define Y6_GPIO_NUM       39
-  #define Y5_GPIO_NUM        5
-  #define Y4_GPIO_NUM       34
-  #define Y3_GPIO_NUM       35
-  #define Y2_GPIO_NUM       32
-  #define VSYNC_GPIO_NUM    25
-  #define HREF_GPIO_NUM     26
-  #define PCLK_GPIO_NUM     21
-
 #else
   #error "Camera model not selected"
 #endif
@@ -145,7 +63,7 @@ httpd_handle_t stream_httpd = NULL;
 static const char PROGMEM INDEX_HTML[] = R"rawliteral(
 <html>
   <head>
-    <title>COL ESP32-CAM CAR</title>
+    <title>COL ESP32-CAM CAR V06</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body { font-family: Arial; text-align: center; margin:0px auto; padding-top: 30px;}
@@ -177,7 +95,7 @@ static const char PROGMEM INDEX_HTML[] = R"rawliteral(
     </style>
   </head>
   <body>
-    <h1>ESP32-CAM Robot</h1>
+    <h1>COL ESP32-CAM V06</h1>
     <img src="" id="photo" >
     <table>
       <tr>
